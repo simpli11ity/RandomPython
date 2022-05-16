@@ -1,0 +1,27 @@
+class Solution:
+    def brutetwoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            print(i)
+            for j in range(len(nums)):
+                if i != j:
+                    if nums[i] + nums[j]== target:
+                        return i,j
+                        
+                        
+
+# Explantation,  create dictionary,  check if the value minus the target is in thwe dictionary, if it is not add the value and index to dictionary, the first value
+  that is in sums from target - value will return the index
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Sum dictionary
+        sums={}
+        # Loops through list with index + value
+        for index, value in enumerate(nums):
+            # if the target value is in sums return 
+            if target-value in sums:
+                return index, sums[target-value]
+                
+            
+            else:
+                # add the value and the index to sums
+                sums[value]=index
