@@ -1,0 +1,23 @@
+
+def fibonacci(x):
+    # first two terms
+    n1, n2 = 0, 1
+    count = 0
+
+    while n2 < x:
+        
+        nth = n1 + n2
+        # update values
+        n1 = n2
+        n2 = nth
+
+
+    if x==n1:
+        return 0
+
+    elif x-n1<n2-x:
+        return x-n1
+    else:
+        return n2-x
+
+print(fibonacci(15))
